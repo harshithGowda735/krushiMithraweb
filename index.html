@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>krushi mithra</title><link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+
+</head>
+<body> 
+   
+<section id="part1">
+  <nav id="head">
+    <h2 id="header">
+      <img id="logo-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNwUmtJ5oSin5ve4rlLnwTKZL0-r5toZhLoA&s"
+        alt="logo" style="width:35px; vertical-align: middle;">
+      <span id="logo-text">KrushiMithra</span>
+    </h2>
+
+    <button id="hamburger">&#9776;</button>
+
+    <div id="home">
+      <h4 onclick="showSection('home-section')">Home</h4>
+      <h4 onclick="showSection('features-section')">Features</h4>
+      <h4 onclick="showSection('about-section')">About us</h4>
+      <h4 onclick="showSection('schemes-section')">Schemes</h4>
+      <button id="sign" onclick="showSection('login-section')">Sign in</button>
+      <button id="download">Get APP</button>
+    </div>
+  </nav>
+</section>
+
+<section id="login-section" style="display:none;">
+    <div class="login-wrapper">
+        <div class="login-header-top">
+            <h1 style="color: white; margin: 0;">KrushiMithra</h1>
+            <p style="color: #fff; margin-top: 10px; font-size: 13px;">
+                New farmer? <span id="switch-to-reg" style="text-decoration: underline; cursor: pointer; font-weight: bold;">Create Account</span>
+            </p>
+        </div>
+
+        <div class="login-body">
+            <h2 id="form-title" style="color: #8E44AD; margin-bottom: 20px;">USER LOGIN</h2>
+            
+            <div class="input-group" id="name-group" style="display: none;">
+                <span class="icon">📝</span>
+                <input type="text" id="reg-name" placeholder="Full Name">
+            </div>
+
+            <div class="input-group">
+                <span class="icon">👤</span>
+                <input type="email" id="reg-email" placeholder="Email Address">
+            </div>
+
+            <div class="input-group">
+                <span class="icon">📞</span>
+                <input type="tel" id="reg-mobile" placeholder="Mobile Number (for Alerts)">
+            </div>
+
+            <div class="input-group">
+                <span class="icon">🔒</span>
+                <input type="password" id="reg-password" placeholder="Password">
+            </div>
+
+            <button id="submit-signin">LOGIN</button>
+            <button id="submit-reg-final" style="display: none; background: #27ae60; color: white; border: none; padding: 10px 40px; border-radius: 5px; cursor: pointer; font-weight: bold;">REGISTER</button>
+
+            <div style="margin-top: 20px;">
+                <p style="font-size: 12px; color: #888; margin-bottom: 10px;">OR</p>
+                <button id="google-signin" style="width: 100%; padding: 10px; background: white; border: 1px solid #ddd; border-radius: 25px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                    <img src="https://www.gstatic.com/images/branding/product/1x/gsa_512dp.png" width="18" height="18">
+                    Sign in with Google
+                </button>
+            </div>
+            
+            <p style="margin-top: 20px;">
+                <a href="#" id="back-from-login" style="color: #888; text-decoration: none; font-size: 12px;">← Back to Home</a>
+            </p>
+        </div>
+    </div>
+</section>
+<section id="schemes-section" style="display:none; padding:20px;">
+  <h3>Government Agricultural Schemes</h3>
+  <ul>
+    <li><a href="https://pmkisan.gov.in/RegistrationFormupdated.aspx">PM-Kisan Samman Nidhi (PM-KISAN)</a></li>
+    <li><a href="https://pmfby.gov.in/">Pradhan Mantri Fasal Bima Yojana (PMFBY)</a></li>
+    <li><a href="https://nfwpis.da.gov.in/Home/PMKisanMaandhanYojana">Pradhan Mantri Kisan Maandhan Yojana</a></li>
+    <li><a href="https://agriinfra.dac.gov.in/">National Agriculture Infra Financing Facility</a></li>
+    <li><a href="https://agristack.gov.in/#/">Agri Stack facilities</a></li>
+    <li><a href="https://www.soilhealth.dac.gov.in/home">Soil Health Card Scheme</a></li>
+    <li><a href="https://nmsa.dac.gov.in/">National Mission on Sustainable Agriculture (NMSA)</a></li>
+  </ul>
+
+  <!-- Back to Home Button -->
+  <div style="margin-top:20px;">
+    <button onclick="showSection(null)" 
+            style="background:#004080; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer; font-weight:bold;">
+      ← Back to Home
+    </button>
+  </div>
+</section> 
+<script>
+function showSection(sectionId) {
+  // Hide all toggleable sections
+  document.getElementById("schemes-section").style.display = "none";
+  document.getElementById("about-section").style.display = "none";
+  document.getElementById("login-section").style.display = "none";
+
+  // Show the requested one if provided
+  if(sectionId) {
+    document.getElementById(sectionId).style.display = "block";
+  }
+}
+</script> 
+<section id="about-section" style="display:none; padding:20px;">
+    <div class="about-origin">
+
+      <h2>🌱 How KrushiMithra Started</h2>
+      <p>
+        KrushiMithra was born from a simple but powerful observation —
+        despite rapid technological growth, many farmers still depend on
+        guesswork, delayed information, and fragmented support systems.
+      </p>
+
+      <p>
+        We noticed that crucial data such as weather alerts, crop advisory,
+        disease identification, and government schemes existed —
+        but were scattered across different platforms, often inaccessible
+        or difficult for farmers to use in real time.
+      </p>
+
+      <p>
+        This gap between <strong>available technology</strong> and
+        <strong>actual farm-level usage</strong> inspired us to build
+        KrushiMithra — a single, intelligent platform that brings
+        everything together in a farmer-friendly way.
+      </p>
+
+      <h2>🚜 Why KrushiMithra Was Built</h2>
+      <p>
+        Farming is not just an occupation — it is a livelihood that
+        depends on timely decisions. A wrong crop choice, unexpected
+        weather, or late disease detection can wipe out months of effort.
+      </p>
+
+      <p>
+        KrushiMithra was created to ensure that farmers:
+      </p>
+
+      <ul class="origin-points">
+        <li>✔ Make informed decisions instead of assumptions</li>
+        <li>✔ Receive guidance exactly when it is needed</li>
+        <li>✔ Reduce crop loss and input costs</li>
+        <li>✔ Gain awareness of schemes and expert support</li>
+      </ul>
+
+      <p>
+        By combining <strong>AI intelligence, cloud infrastructure,
+        voice-based interaction, and local relevance</strong>,
+        KrushiMithra empowers farmers to move from uncertainty
+        to confidence — and from survival to profitability.
+      </p>
+
+    </div>
+
+    <div id="about-hero">
+      <div class="about-slide active"
+        style="background-image:url('https://images.picxy.com/cache/2021/7/30/12651853d43dff90030640720e2f7889.jpg')">
+      </div>
+
+      <div class="about-slide"
+        style="background-image:url('https://media.istockphoto.com/id/1280271119/photo/indian-farmer-showing-a-mobile-screen-at-agriculture-field.jpg?s=612x612&w=0&k=20&c=2P4qwwcTq98KRJoanp6yA871cdVKQCmkhP-Inp_zXYo=')">
+      </div>
+
+      <div class="about-slide"
+        style="background-image:url('https://images.livemint.com/img/2024/08/01/600x338/INDIA-BUDGET--0_1721741847754_1722514527094.JPG')">
+      </div>
+
+      <div class="about-hero-content">
+        <h1>About KrushiMithra</h1>
+        <p>
+          Empowering farmers with AI-driven insights, real-time weather intelligence,
+          and government scheme awareness — all in one platform.
+        </p>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <p>
+        <strong>KrushiMithra</strong> is a farmer-friendly digital platform designed to
+        simplify modern agriculture. It helps farmers make informed decisions
+        using artificial intelligence, cloud computing, and real-time data.
+      </p>
+
+      <p>
+        From crop planning and disease detection to weather alerts and subsidy matching,
+        KrushiMithra supports farmers throughout the farming lifecycle,
+        helping them reduce risk and increase profitability.
+      </p>
+    </div>
+
+    <!-- Back to Home Button -->
+    <div style="margin-top:20px;">
+      <button onclick="showSection(null)" 
+              style="background:#004080; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer; font-weight:bold;">
+        ← Back to Home
+      </button>
+    </div>
+</section>
+<section id="dashboard-section" style="display: none; padding: 100px 20px; text-align: center;">
+    <div style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: inline-block; min-width: 300px;">
+        <h2 style="color: #27ae60;">Welcome, <span id="dash-user">Farmer</span>! 🌱</h2>
+        <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
+        <p><strong>Email:</strong> <span id="dash-email">---</span></p>
+        <p><strong>Mobile:</strong> <span id="dash-mobile">---</span></p>
+        <p><strong>Role:</strong> <span id="dash-role">Farmer</span></p>
+        <button id="dash-logout" style="margin-top: 20px; background: #27ae60; color: white; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer;">Logout Account</button>
+        <button id="dash-back" style="margin-top: 20px; background:#27ae60; color: white; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; margin-right: 10px;">
+    🏠 Back to Home
+</button>
+    </div>
+</section>
+
+<section id="hero">
+    <div class="hero-content">
+        <div id="bg1">
+            <div class="badge">
+                <span class="dot"></span> 
+                <span id="tagline">Empowering Farmers Through Digital Innovation</span>
+            </div>
+            <h1>KrushiMithra</h1>
+            <h2>Live Weather Alerts • Crop Disease Detection • Market Guidance • Voice Support</h2>
+        </div>
+        <div id="status-text" style="color: #ffd700; margin-bottom: 10px; font-weight: bold; min-height: 20px;"></div>
+        <div id="button1"> 
+            <button id="voice"> <i class="ri-mic-2-line"></i>Speak to <br> KrushiMithra</button>
+            <button id="camera"><i class="ri-camera-4-line"></i> Upload Crop <br> Image</button>
+        </div>
+    </div>
+    <input type="file" id="imageInput" accept="image/*" capture="environment" style="display: none;">
+</section>
+<div id="disease-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:9999; justify-content:center; align-items:center; padding:20px; font-family: sans-serif;">
+    <div style="background:#fff; border-radius:15px; width:100%; max-width:450px; padding:25px; color:#333; position:relative;">
+        <span id="close-modal" style="position:absolute; right:20px; top:10px; font-size:35px; cursor:pointer; color:#999;">&times;</span>
+        
+        <h2 style="color:#27ae60; margin-top:0;">Diagnosis Result</h2>
+        <img id="preview-img" style="width:100%; border-radius:10px; margin: 15px 0; border: 1px solid #eee;">
+        
+        <h3 id="plant-disease-name" style="margin: 0; color:#e74c3c;">Detecting...</h3>
+        
+        <div style="margin-top: 15px;">
+            <p><strong>⚠️ Symptoms:</strong><br><span id="disease-symptoms" style="font-size: 0.95rem;">Please wait...</span></p>
+            <p><strong>✅ Prevention:</strong><br><span id="disease-prevention" style="font-size: 0.95rem;">Please wait...</span></p>
+        </div>
+    </div>
+</div>
+<div id="disease-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:999; justify-content:center; align-items:center; padding:20px;">
+        <div style="background:#fff; border-radius:15px; width:100%; max-width:500px; padding:25px; position:relative; max-height:90vh; overflow-y:auto;">
+            <span id="close-modal" style="position:absolute; right:20px; top:15px; font-size:24px; cursor:pointer; color:#333;">&times;</span>
+            
+            <h2 style="color:#27ae60; margin-bottom:10px;">Diagnosis Result</h2>
+            <div id="result-content">
+                <img id="preview-img" style="width:100%; border-radius:10px; margin-bottom:15px; border:1px solid #ddd;">
+                <h3 id="plant-disease-name" style="margin-bottom:5px; color:#333;">Analyzing...</h3>
+                <p id="disease-confidence" style="color:#7f8c8d; font-size:0.9rem; margin-bottom:15px;"></p>
+                
+                <div style="background:#f9f9f9; padding:15px; border-radius:10px; border-left:4px solid #e74c3c; color:#333;">
+                    <strong>⚠️ Symptoms:</strong>
+                    <p id="disease-symptoms" style="margin-top:5px; font-size:0.95rem;"></p>
+                </div>
+                
+                <div style="background:#f9f9f9; padding:15px; border-radius:10px; border-left:4px solid #2ecc71; margin-top:15px; color:#333;">
+                    <strong>✅ Prevention:</strong>
+                    <p id="disease-prevention" style="margin-top:5px; font-size:0.95rem;"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+<section id="main">
+    <h1 id="mainline">Everything a Farmer Needs</h1>
+    <h3 id="subline">Powerful AI tools designed for ease of use in the field.</h3>
+</section>
+
+<section id="boxes">
+    <div id="cards">
+        <div class="card" onclick="openTool('weather')">
+            <div class="icon-box icon-blue">
+                <img src="app-arrow-down.svg" alt="Weather Icon">
+            </div>
+            <h3>Live Weather & Rain Alerts</h3>
+            <p class="subtext">Hyper-local weather forecasts and flood <br> warnings directly to your phone.</p>
+        </div>
+
+        <div class="card" onclick="openTool('voice')">
+            <div class="icon-box icon-purple">
+                <img src="voice.png" alt="Voice Icon">
+            </div>
+            <h3>Voice Support in Local Language</h3>
+            <p class="subtext">No typing needed. Just speak to get <br> instant farming solutions.</p>
+        </div>
+
+        <div class="card" onclick="openTool('crop')">
+            <div class="icon-box icon-green">
+                <img src="camera.png" alt="Crop Icon">
+            </div>
+            <h3>Crop Disease Detection</h3>
+            <p class="subtext">Snap a photo and get AI diagnosis and <br> treatment plans in seconds.</p>
+        </div>
+
+        <div class="card" onclick="openTool('fertilizer')">
+            <div class="icon-box icon-yellow">
+                <img src="chemicals.png" alt="Fertilizer Icon">
+            </div>
+            <h3>Fertilizer Recommendation</h3>
+            <p class="subtext">Optimized chemical and organic fertilizer <br> ratios based on soil and crop.</p>
+        </div>
+
+        <div class="card" onclick="openTool('schemes')">
+            <div class="icon-box icon-red">
+                <img src="cyber-security.png" alt="Security Icon">
+            </div>
+            <h3>Gov Schemes & Subsidies</h3>
+            <p class="subtext">Never miss a government benefit. We <br> track all PM-Kisan and local updates.</p>
+        </div>
+
+        <div class="card" onclick="openTool('officer')">
+            <div class="icon-box icon-teal">
+                <img src="phone-call.png" alt="Call Icon">
+            </div>
+            <h3>Agriculture Officer Connect</h3>
+            <p class="subtext">One-click call to your nearest Krishi <br> Vigyan Kendra or support officer.</p>
+        </div>
+    </div>
+</section>
+
+<div id="toolModal" class="modal-overlay">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeTool()">&times;</span>
+        <div id="modal-inner-content">
+            </div>
+    </div>
+</div>
+<section id="schemes">
+    <div class="rts"> 
+        <div class="left-content">
+            <h1 class="headline">
+                Government Support, <br>
+                <span class="sub">Simplified.</span>
+            </h1>
+            <div class="content"> 
+                <p>Access real-time subsidies, market rates, and direct <br> 
+                expert contacts in your pocket. KrushiMithra bridges the <br> 
+                gap between policy and practice.</p>
+            </div>
+            <ul class="feature-list">
+                <li>Real-time PM-Kisan tracking</li>
+                <li>Daily APMC Market rates</li>
+                <li>District Officer directory</li>
+                <li>Crop insurance guidance</li>
+            </ul>
+        </div>
+<div class="right-visual">
+    <div class="glass-panel">
+        <div class="status-card">
+            <span class="card-text">Kisan Credit Card (KCC)</span>
+            <a href="https://www.myscheme.gov.in/schemes/kcc" target="_blank" class="badge-link">
+                <button class="badge badge-apply-kcc">APPLY</button>
+            </a>
+        </div>
+
+        <div class="status-card">
+            <span class="card-text">Fertilizer Subsidy 2026</span>
+            <a href="https://www.fert.gov.in/en/department/our-wings/fertilizer-subsidy" target="_blank" class="badge-link">
+                <button class="badge badge-apply-now">APPLY NOW</button>
+            </a>
+        </div>
+
+       <div class="market-card">
+    <p class="alert-label">
+        <span class="live-dot"></span> LIVE: <span id="location-name">Detecting Location...</span>
+    </p>
+    <h3 id="veg-price">Onion: --</h3>
+    <p class="alert-sub" id="market-info">Waiting for location access...</p>
+</div>
+    </div>
+</div>
+</section>
+
+<section id="nearmandis" style="display: flex; align-items: center; justify-content: space-between; padding: 60px 10%; gap: 50px;">
+    <div class="mandi-content" style="flex: 1;">
+        <p class="label" style="color: #0a9d6c; font-weight: bold; text-transform: uppercase; font-size: 14px;">MARKET ACCESS</p>
+        <h1 class="mandi-title" style="font-size: 36px; font-weight: 800; color: #0f172a; margin: 10px 0 20px 0;">Locate Nearby Mandis & Timings</h1>
+        <p class="description" style="color: #64748b; line-height: 1.6; margin-bottom: 30px;">
+            Most Mandis start as early as 4 AM. Use KrushiMithra to find official operating <br> 
+            hours and the fastest route to get the best price for your produce.
+        </p>
+        <button class="searchbutton" onclick="findNearbyMandis()" style="background-color: #0a9d6c; color: white; padding: 15px 30px; border: none; border-radius: 12px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 14px rgba(10, 157, 108, 0.4);">
+            Search Mandis Near Me
+        </button>
+    </div>
+
+    <div id="map-container" style="flex: 1; border: 2px dashed #e2e8f0; border-radius: 24px; height: 400px; display: flex; align-items: center; justify-content: center; background-color: #ffffff; overflow: hidden; position: relative;">
+        <div id="placeholder-content" style="text-align: center; color: #94a3b8;">
+            <div style="font-size: 50px; margin-bottom: 10px; opacity: 0.3;">🗺️</div>
+            <p id="status-text">Allow location to see nearby Mandis</p>
+        </div>
+    </div>
+</section>
+<section id="suggest">
+    <div class="suggest-container">
+        <div class="suggest-left">
+            <p class="label">Smart Advisor</p>
+            <h1 class="textline">Suggest Profitable Crops <br>for Your Region</h1>
+            <p class="suggest-para">
+                KrushiMithra analyzes your live location to provide real-time farming precautions and high-profit crop recommendations.
+            </p>
+            <button class="suggest-button" id="mainSuggestBtn" onclick="openExpertInsights()">
+                <div class="loader-circle" id="btnCircle"></div>
+                <span id="btnText">Analyze Weather & Market</span>
+            </button>
+        </div>
+
+        <div class="suggest-right">
+            <div class="glass-card">
+                <div class="icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#1DB98A" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </div>
+                <p class="card-label">WEATHER STATUS</p>
+                <div id="data-weather" style="margin-top:10px; font-weight:bold;">Detecting...</div>
+            </div>
+            <div class="glass-card">
+                <div class="icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#1DB98A" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                </div>
+                <p class="card-label">PRECAUTION</p>
+                <div id="precaution-text" style="margin-top:10px; font-size:14px; text-align:center;">Waiting for GPS...</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="expert-popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(3, 64, 49, 0.98); z-index: 99999; justify-content: center; align-items: center; backdrop-filter: blur(15px);">
+        <div style="background: white; width: 95%; max-width: 1000px; border-radius: 30px; padding: 40px; position: relative; max-height: 90vh; overflow-y: auto; color: #333;">
+            
+            <button onclick="closeExpertInsights()" style="position: absolute; top: 25px; right: 25px; width: 45px; height: 45px; border-radius: 50%; border: none; background: #f1f5f9; cursor: pointer; font-size: 22px; font-weight: bold; color: #034031; display: flex; align-items: center; justify-content: center;">✕</button>
+
+            <h2 style="color: #034031; font-size: 28px; margin-bottom: 5px;">Smart Farming Insights</h2>
+            <p id="location-display" style="color: #1DB98A; font-weight: bold; margin-bottom: 30px;">📍 Location Syncing...</p>
+
+            <div style="display: flex; gap: 40px; flex-wrap: wrap;">
+                <div style="flex: 1.2; min-width: 320px;">
+                    <h3 style="border-left: 5px solid #1DB98A; padding-left: 15px; margin-bottom: 20px; color: #034031;">💎 Profitable Crop Suggestions</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px;">
+                        <div class="crop-mini-card"><img src="https://indifoodbev.com/wp-content/uploads/2025/04/31318_pepper.jpg"><div><strong>Black Pepper</strong><small>High Value</small></div></div>
+                        <div class="crop-mini-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtQalKFk_EYNBfOhghSC3i3feKV4v7G9qRNQ&s"><div><strong>Strawberry</strong><small>Premium ROI</small></div></div>
+                        <div class="crop-mini-card"><img src="https://cdn.britannica.com/16/187216-050-CB57A09B/tomatoes-tomato-plant-Fruit-vegetable.jpg"><div><strong>Tomato</strong><small>Season Specialty</small></div></div>
+                        <div class="crop-mini-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQCiULqgdHH5NZ-Et6lgcbopGTCgMAeZbazA&s"><div><strong>Mushrooms</strong><small>Indoor Setup</small></div></div>
+                        <div class="crop-mini-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxyFPWcXaTnuCXpEA3eOEKiiIihvhsM9nZww&s"><div><strong>Dragon Fruit</strong><small>Export Quality</small></div></div>
+                        <div class="crop-mini-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5gwEx3zDNwXP_S4IjGhs24liH0Gc0IcUqSQ&s"><div><strong>Mango</strong><small>Orchard Profit</small></div></div>
+                    </div>
+
+                    <div style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px;">
+                        <h3 style="border-left: 5px solid #034031; padding-left: 15px; margin-bottom: 15px; color: #034031;">🏛️ Agricultural Research Support</h3>
+                        <div id="gov-farms-list" style="display: flex; gap: 15px; flex-wrap: wrap;">
+                            <div class="gov-card">
+                                <div style="font-size: 20px;">📍</div>
+                                <div>
+                                    <strong id="farm-name">GKVK - UAS Bengaluru</strong>
+                                    <p style="font-size: 11px; margin: 2px 0; color: #666;">Distance: 4.2 km | Government Farm</p>
+                                    <div style="display: flex; gap: 10px; margin-top: 5px;">
+                                        <a href="https://uasbangalore.edu.in/" target="_blank" style="font-size: 10px; color: #1DB98A; font-weight: bold; text-decoration: none;">Experts →</a>
+                                        <a href="https://www.google.com/maps/search/GKVK+Bengaluru" target="_blank" style="font-size: 10px; color: #034031; font-weight: bold; text-decoration: none;">Directions 📍</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="gov-card">
+                                <div style="font-size: 20px;">📍</div>
+                                <div>
+                                    <strong>ICAR - IIHR</strong>
+                                    <p style="font-size: 11px; margin: 2px 0; color: #666;">Hessaraghatta | National Institute</p>
+                                    <div style="display: flex; gap: 10px; margin-top: 5px;">
+                                        <a href="https://www.iihr.res.in/" target="_blank" style="font-size: 10px; color: #1DB98A; font-weight: bold; text-decoration: none;">Seeds →</a>
+                                        <a href="https://www.google.com/maps/search/ICAR+IIHR+Bengaluru" target="_blank" style="font-size: 10px; color: #034031; font-weight: bold; text-decoration: none;">Directions 📍</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="flex: 0.8; min-width: 280px;">
+                    <h3 style="border-left: 5px solid #1DB98A; padding-left: 15px; margin-bottom: 20px; color: #034031;">🚀 Advanced Tech</h3>
+                    <div style="background: #034031; border-radius: 25px; overflow: hidden; height: 380px; color: white; text-align: center;">
+                        <img id="tech-img" src="" style="width: 100%; height: 180px; object-fit: cover; transition: 0.4s;">
+                        <div style="padding: 20px;">
+                            <h4 id="tech-name" style="color: #1DB98A; font-size: 20px; margin-bottom: 10px;"></h4>
+                            <p id="tech-info" style="font-size: 14px; opacity: 0.8; margin-bottom: 20px; height: 40px;"></p>
+                            <a id="tech-link" href="#" target="_blank" style="background: white; color: #034031; padding: 10px 20px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 13px; display: inline-block;">Watch Setup Guide 🎥</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.crop-mini-card { background: #f8fafc; border-radius: 15px; padding: 10px; display: flex; align-items: center; gap: 10px; border: 1px solid #e2e8f0; }
+.crop-mini-card img { width: 50px; height: 50px; border-radius: 10px; object-fit: cover; }
+.crop-mini-card strong { display: block; font-size: 13px; color: #034031; }
+.crop-mini-card small { font-size: 11px; color: #1DB98A; font-weight: bold; }
+
+.gov-card {
+    background: #f0fdf4;
+    border: 1px dashed #1DB98A;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 250px;
+}
+</style>
+
+<style>
+.crop-mini-card { background: #f8fafc; border-radius: 15px; padding: 10px; display: flex; align-items: center; gap: 10px; border: 1px solid #e2e8f0; }
+.crop-mini-card img { width: 50px; height: 50px; border-radius: 10px; object-fit: cover; }
+.crop-mini-card strong { display: block; font-size: 13px; color: #034031; }
+.crop-mini-card small { font-size: 11px; color: #1DB98A; font-weight: bold; }
+</style>
+<section id="feedback">
+    <h1 class="feed">Voices from the Field</h1>
+    <p>Real experiences from farmers using AI-powered insights.</p>
+    
+    <div id="feedback-controls">
+        <div class="rating-wrapper">
+            <div class="stars">
+                <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+            </div>
+        </div>
+
+        <textarea id="feedbackarea" placeholder="Tell us how we can improve and your experience"></textarea>
+        <br>
+        <button class="feed" onclick="submitFeedback()">SEND FEEDBACK</button>
+    </div>
+
+    <div id="success-banner" class="message-pill" style="display: none;">
+        Dhanyawad! Thank you for your feedback. We are working hard to support you.
+    </div>
+</section>
+<footer class="main-footer">
+    <div class="footer-logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNwUmtJ5oSin5ve4rlLnwTKZL0-r5toZhLoA&s" 
+             alt="KrushiMithra Logo" class="logo-img">
+        <span class="logo-text">KrushiMithra</span>
+    </div>
+    
+    <p class="copyright">© 2026 KrushiMithra Tech Pvt Ltd. All rights reserved.</p>
+    
+    <div class="footer-links">
+        <a href="privacy.com">Privacy</a>
+        <a href="terms.com">Terms</a>
+        <a href="support.com">Support</a>
+    </div>
+</footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>

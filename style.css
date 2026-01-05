@@ -1,0 +1,1404 @@
+/* Login Container Style */
+.login-wrapper {
+    max-width: 450px;
+    margin: 50px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.login-header-top {
+    background: linear-gradient(135deg, #259f5c, #259f6c);
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.login-body {
+    background: white;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+/* Input Fields Style */
+.input-group {
+    background: #e8daef;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    background: transparent;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    outline: none;
+   color: #010e08;
+}
+
+.input-group .icon {
+    color: #3db983;
+    margin-right: 10px;
+}
+
+/* Options & Button */
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #3db983;
+    margin-bottom: 25px;
+}
+
+#submit-signin {
+    background:  #3db983;;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#submit-signin:hover {
+    background: #3db983;;
+}
+
+ *{
+  margin: 0px;
+  padding: 0px;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+}
+#part1 {
+  font-size: x-large;
+  font-weight: bold;
+  padding: 35px;
+  align-items: center;
+}
+#sign, #download {
+  border-radius: 30px;
+  background-color: green;
+  padding: 10px 20px;
+  text-wrap: none;
+  color: white;
+  border-color: rgb(20, 247, 247);
+}
+#sign:hover,
+#download:hover {
+  transform: scale(1.05);
+  background-color: darkgreen;
+}
+#head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#home {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+#home h4:hover {
+  transform: scale(1.05);
+  color: darkgreen;
+}
+
+/* Hamburger button */
+#hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  #home {
+    display: none; /* hide menu initially */
+    flex-direction: column;
+    gap: 20px;
+    background: #f5f5f5;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  }
+
+  #home.show {
+    display: flex; /* show when toggled */
+  }
+
+  #hamburger {
+    display: block; /* show hamburger on mobile */
+  }
+}
+/* ================================
+   ABOUT SECTION – FIRST IMPRESSION
+================================ */
+
+#about-section {
+  padding: 0;
+  background: #f6fff8;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Hero slider container */
+#about-hero {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Individual slides */
+.about-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 1.2s ease-in-out;
+}
+
+/* Active slide */
+.about-slide.active {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 1;
+}
+
+/* Dark gradient overlay */
+#about-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.35)
+  );
+  z-index: 2;
+}
+
+/* Text over hero */
+.about-hero-content {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  max-width: 700px;
+  color: #ffffff;
+}
+
+.about-hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.about-hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+/* About text content */
+.about-content {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.about-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+/* Soft card feel */
+.about-content {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 50px 40px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  #about-hero {
+    height: 65vh;
+  }
+
+  .about-hero-content {
+    left: 5%;
+    right: 5%;
+  }
+
+  .about-hero-content h1 {
+    font-size: 2.1rem;
+  }
+
+  .about-hero-content p {
+    font-size: 1rem;
+  }
+
+  .about-content {
+    margin: 50px 15px;
+    padding: 35px 20px;
+  }
+}
+.about-origin {
+  max-width: 900px;
+  margin: 80px auto 100px;
+  padding: 0 20px;
+}
+
+.about-origin h2 {
+  color: #14532d;
+  margin-bottom: 15px;
+}
+
+.about-origin p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #374151;
+  margin-bottom: 15px;
+}
+
+.origin-points {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.origin-points li {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+
+#hero {
+ width: 100%;
+min-height: 80vh;
+
+ background: linear-gradient(rgba(10, 50, 30, 0.7), rgba(0, 0, 0, 0.3)), url('fix.webp');
+ background-size: cover;
+background-position: center;
+ display : flex;
+ flex-direction: column;
+ justify-content: center;
+ padding-left: 8%; 
+ font-family: 'Inter', sans-serif;
+ color: white;
+}
+.badge {
+ display: inline-flex;
+ align-items: center;
+ background: rgba(255, 255, 255, 0.15);
+ border: 1px solid rgba(255, 255, 255, 0.3);
+ backdrop-filter: blur(8px);
+padding: 8px 18px;
+ border-radius: 50px;
+ margin-bottom: 25px;
+ color: #FFFFFF;
+ font-size: 0.9rem;
+ transition: all 0.5s ease; 
+}
+
+.dot {
+ width: 10px;
+ height: 10px;
+ background-color: #38C695;
+ border-radius: 50%;
+ margin-right: 12px;
+}
+
+
+#bg1 h1 {
+ font-size: 4rem;
+ margin-bottom: 10px;
+ font-weight: 800;
+}
+
+#bg1 h2 {
+ font-size: 1.2rem;
+ font-weight: 400;
+ max-width: 600px;
+ line-height: 1.6;
+ margin-bottom: 40px;
+ opacity: 0.9;
+}
+
+
+#button1 {
+ display: flex;
+gap: 20px;
+}
+
+
+#button1 button {
+ display: flex;
+ align-items: center;
+ padding: 15px 25px;
+ border-radius: 12px;
+ border: none;
+ font-size: 1rem;
+ font-weight: 700;
+ cursor: pointer;
+ transition: all 0.3s ease;
+}
+
+#button1 button i {
+font-size: 1.5rem;
+ margin-right: 12px;
+}
+
+
+#voice {
+ background-color: #1DB98A; 
+color: white;
+}
+
+#voice:hover {
+ background-color: #169b73;
+}
+
+#camera {
+ background-color: #ffffff;
+ color: #1A3D32; 
+}
+
+#camera:hover {
+background-color: #f0f0f0;
+}
+#main{
+    text-wrap: none;
+    padding: 20px 10px;
+    margin-top: 50px;
+    text-align: center;
+  font-weight: bold;
+}
+#mainline{
+   font-size: 45px;
+   font-family: sans-serif;
+}
+#subline{
+    margin-top: 10px;
+      font-size: 20px;
+  font-family:math;
+  color: rgba(27, 25, 25, 0.447);
+} 
+/* this for cards */
+#boxes {
+    padding: 60px 20px;
+    background-color: #f9fbff;
+    font-family: sans-serif;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    display: none; 
+    position: fixed; 
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
+    background: rgba(0, 0, 0, 0.7); 
+    z-index: 1000;
+    justify-content: center; 
+    align-items: center;
+}
+
+/* Modal Box */
+.modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #888;
+}
+
+.action-btn {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.card { cursor: pointer; transition: 0.2s; }
+.card:active { transform: scale(0.95); } /* Subtle click effect */
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid #edf2f7;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.icon-box img {
+    width: 24px;
+    height: 24px;
+}
+
+
+.icon-blue { background-color: #e0e7ff; }
+.icon-purple { background-color: #f3e8ff; }
+.icon-green { background-color: #dcfce7; }
+.icon-yellow { background-color: #fef3c7; }
+.icon-red { background-color: #fee2e2; }
+.icon-teal { background-color: #ccfbf1; }
+
+.card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    color: #1a202c;
+}
+
+.subtext {
+    color: #718096;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid #edf2f7;
+    cursor: pointer;
+    position: relative;
+    z-index: 1; 
+    
+   
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
+}
+
+.card:hover {
+    transform: translateY(-8px); 
+   
+    box-shadow: 0 25px 50px -12px rgba(72, 187, 120, 0.4); 
+    
+  
+    border-color: #9ae6b4;
+}
+
+
+.card::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 24px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    box-shadow: inset 0 0 15px rgba(72, 187, 120, 0.1);
+    z-index: -1;
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+
+.icon-box {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* --- THE MODAL OVERLAY (The dark background) --- */
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    backdrop-filter: blur(8px); /* Blurs the background for a modern look */
+    z-index: 9999; /* Ensures it stays on top of everything */
+    justify-content: center; 
+    align-items: center;
+    padding: 20px;
+}
+
+/* --- THE MODAL BOX (The white window) --- */
+.modal-content {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 450px; /* Limits width on laptops */
+    position: relative;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    animation: modalPop 0.3s ease-out; /* Smooth entry animation */
+}
+
+/* --- POPUP ANIMATION --- */
+@keyframes modalPop {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* --- CLOSE BUTTON (The X) --- */
+.close-btn {
+    position: absolute;
+    top: 20px; 
+    right: 25px;
+    font-size: 32px;
+    cursor: pointer;
+    color: #a0aec0;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: #e53e3e; /* Turns red on hover */
+}
+
+/* --- STYLING INSIDE THE MODAL --- */
+#modal-inner-content h2 {
+    color: #2ecc71; /* Agri-Green color */
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+#modal-inner-content p {
+    color: #4a5568;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* --- MODAL ACTION BUTTON --- */
+.action-btn {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%; /* Full width on mobile */
+    transition: background 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.action-btn:hover {
+    background: #27ae60;
+}
+
+/* --- LOADING SPINNER --- */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #2ecc71;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* Container Fixes */
+.rts {
+    width: 100%;
+    min-height: 600px; 
+    background-color: #0c3e30;
+    padding: 80px 10%; /* Responsive padding instead of fixed 200px */
+    display: flex;
+    justify-content: space-between; /* Pushes content to left and right */
+    align-items: center;
+    box-sizing: border-box;
+    gap: 40px;
+}
+
+.left-content {
+    flex: 1;
+}
+
+/* Re-using your specific styles with minor fixes */
+.headline {
+    margin: 0;
+    color: #edf2f7;
+    font-family: sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.sub {
+    color: rgb(79, 212, 108);
+}
+
+.content {
+    padding: 20px 0;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    color: #8bcebb;
+    line-height: 1.6;
+}
+
+/* Feature List (from previous steps) */
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+.feature-list li {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: sans-serif;
+    margin-bottom: 12px;
+}
+.feature-list li::before {
+    content: '✔';
+    width: 20px;
+    height: 20px;
+    background: #4fd46c;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    color: #0c3e30;
+    font-size: 0.7rem;
+}
+
+/* RIGHT SIDE STYLING (The New Part) */
+.right-visual {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.05); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Frosty glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+}
+/* Container for the link */
+.badge-link {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.status-card {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 18px 20px; /* Increased vertical padding */
+    border-radius: 12px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Aligns items to the top */
+    color: #edf2f7;
+    font-family: sans-serif;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    padding-top: 8px; /* Pushes text down so badge looks higher */
+    font-weight: 500;
+}
+
+.badge {
+    border: none;
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 6px 16px;
+    border-radius: 20px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Negative margin pulls the button upward */
+    margin-top: -4px; 
+    letter-spacing: 0.5px;
+}
+
+/* KCC Apply Button Color (Green) */
+.badge-apply-kcc { 
+    background: #4fd46c; 
+    color: #0c3e30; 
+}
+
+/* Fertilizer Apply Button Color (Orange) */
+.badge-apply-now { 
+    background: #ff9800; 
+    color: white; 
+}
+
+/* Hover effect */
+.badge:hover {
+    transform: translateY(-4px) scale(1.05); /* Lifts and grows slightly */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.1);
+}
+
+.badge:active {
+    transform: translateY(0) scale(1);
+}
+/* Market Rate Card (Bottom Box) */
+.market-card {
+    background: #084d3e;
+    border: 1px solid #4fd46c;
+    border-radius: 15px;
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+.alert-label {
+    color: #4fd46c;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.market-card h3 {
+    color: white;
+    margin: 5px 0;
+    font-size: 1.3rem;
+}
+
+.alert-sub {
+    color: #8bcebb;
+    font-size: 0.8rem;
+    margin: 0;
+}
+/* Existing market card styles */
+.market-card {
+    background: #084d3e;
+    border: 1px solid #4fd46c;
+    border-radius: 15px;
+    padding: 20px;
+    font-family: sans-serif;
+    transition: all 0.3s ease;
+}
+
+/* Add a "Live" pulse dot next to the label */
+.alert-label::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #ff4b4b; /* Red pulse */
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.2); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Class to trigger when content changes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Container for the link to remove default styles */
+.badge-link {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.status-card {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 18px 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Badge sits higher than text */
+    color: #edf2f7;
+    font-family: sans-serif;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    padding-top: 8px; /* Alignment adjustment */
+    font-weight: 500;
+}
+
+.badge {
+    border: none;
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 6px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    margin-top: -4px; /* Pulls button upward visually */
+    letter-spacing: 0.5px;
+}
+
+/* Green KCC Button */
+.badge-apply-kcc { 
+    background: #4fd46c; 
+    color: #0c3e30; 
+}
+
+/* Orange Fertilizer Button */
+.badge-apply-now { 
+    background: #ff9800; 
+    color: white; 
+}
+
+/* Hover Glow for KCC (Green) */
+.badge-apply-kcc:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px rgba(79, 212, 108, 0.6), 
+                0 0 30px rgba(79, 212, 108, 0.2);
+    filter: brightness(1.1);
+}
+
+/* Hover Glow for Fertilizer (Orange) */
+.badge-apply-now:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px rgba(255, 152, 0, 0.5), 
+                0 0 30px rgba(255, 152, 0, 0.2);
+    filter: brightness(1.1);
+}
+
+.badge:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+#veg-price, #market-info {
+    transition: opacity 0.4s ease-in-out;
+}
+#veg-price {
+    transition: all 0.5s ease-in-out;
+    display: block; /* Ensures the transform works correctly */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#market-info {
+    font-size: 0.9rem;
+    color: #cbd5e0;
+    margin-top: 5px;
+}
+
+/* The Blinking Red Dot from your HTML */
+.live-dot {
+    height: 10px;
+    width: 10px;
+    background-color: #ff4444;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    box-shadow: 0 0 10px #ff4444;
+    animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+    50% { opacity: 0; transform: scale(1.2); }
+}
+
+.live-dot {
+    height: 8px;
+    width: 8px;
+    background-color: #ff4b4b;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    box-shadow: 0 0 8px #ff4b4b;
+    animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 75, 75, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(255, 75, 75, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 75, 75, 0); }
+}
+@keyframes pulse-border {
+    0% { border-color: #e2e8f0; }
+    50% { border-color: #0a9d6c; box-shadow: 0 0 20px rgba(10, 157, 108, 0.2); }
+    100% { border-color: #e2e8f0; }
+}
+
+.scanning-active {
+    animation: pulse-border 1.5s infinite ease-in-out;
+}
+
+.searchbutton:active {
+    transform: scale(0.95);
+}
+/* Ensure the button is big enough for thumbs on mobile */
+.suggest-button {
+    min-height: 50px;
+    padding: 12px 25px;
+    touch-action: manipulation; /* Optimizes for touch */
+}
+
+/* Responsive Popup adjustments */
+@media (max-width: 768px) {
+    #expert-popup > div {
+        width: 95%;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    /* Stack the Crop grid and Tech slider vertically */
+    #expert-popup .suggest-flex-container { 
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    /* Make the crop grid 1 column on very small phones */
+    #expert-popup .crop-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .textline {
+        font-size: 24px; /* Smaller text for mobile screens */
+    }
+}
+.gov-card {
+    background: #f0fdf4;
+    border: 1px dashed #1DB98A;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 250px;
+}
+#suggest {
+  margin-top: 50px;
+    background-color: #034031; /* Deep forest green from screenshot */
+    padding: 100px 10%;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.suggest-container {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+}
+
+.textline {
+    font-size: 3.5rem;
+    font-weight: 800; /* Extra bold like the screenshot */
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.suggest-para {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #a7f3d0; /* Muted mint green */
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+/* Button Styling */
+.suggest-button {
+    background-color: #10b981; /* Brand green */
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 18px 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.suggest-button:hover {
+    transform: scale(1.02);
+}
+
+/* The Pulsing Loader Circle */
+.loader-circle {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Layout Adjustment */
+.suggest-container {
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.suggest-right {
+    display: flex;
+    gap: 25px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+/* Glass Card Styling */
+.glass-card {
+    background: rgba(255, 255, 255, 0.03); /* Very subtle white */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    width: 220px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    transform: translateY(-10px);
+    border-color: #1DB98A;
+}
+
+/* Icon Container */
+.icon-box {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.icon-box svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Label Styling */
+.card-label {
+    color: #1DB98A; /* Same green as button */
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin: 0;
+}
+/* 1. Main Section Container */
+#feedback {
+    text-align: center;
+    padding: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 2. Star Rating System */
+.rating-wrapper {
+    margin: 10px 0 20px 0;
+}
+
+.stars {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.stars input { 
+    display: none; 
+}
+
+.stars label {
+    font-size: 32px;
+    color: #d1d5db; /* Grey star */
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+/* Star lighting logic */
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+    color: #ffc107; /* Gold star */
+}
+
+/* 3. Input & Textarea */
+#feedbackarea {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    max-width: 500px;
+    height: 100px;
+    background-color: rgba(245, 222, 179, 0.418);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border: 1px solid #423a3a;
+    border-radius: 12px;
+}
+
+/* 4. Button Design */
+button.feed {
+    background-color: #0a8159;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button.feed:hover {
+    background-color: #10b981;
+}
+
+/* 5. Success Banner (The Dhanyawad Pill) */
+#success-banner {
+    display: none; /* Controlled by submitFeedback() in script.js */
+    background-color: #ecfdf5; /* Light green background */
+    color: #065f46;           /* Dark green text */
+    padding: 20px 30px;
+    border-radius: 30px;       /* Pill shape */
+    border: 1px solid #d1fae5;
+    font-weight: 500;
+    max-width: 600px;          /* Adjusted for best look */
+    margin: 20px auto;         /* PERFECTLY CENTERS THE PILL */
+    box-shadow: 0 4px 12px rgba(10, 157, 108, 0.1);
+}
+
+    .main-footer {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-top: 1px solid #f0f0f0;
+    }
+
+    .footer-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    /* Styles for the logo image to match the box size in your screenshot */
+    .logo-img {
+        width: 35px;
+        height: 35px;
+        object-fit: contain; /* Ensures the logo isn't stretched */
+        border-radius: 6px;  /* Matches the slight rounding in your design */
+    }
+
+    .logo-text {
+        font-size: 20px;
+        font-weight: 700;
+        color: #757575;
+        letter-spacing: -0.5px;
+    }
+
+    .copyright {
+        font-size: 14px;
+        color: #6b7280;
+        margin-bottom: 20px;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .footer-links a {
+        text-decoration: none;
+        color: #94a3b8;
+        font-size: 16px;
+        transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+        color: #1e293b;
+    }
+    #nearmandis {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px 10%;
+        gap: 50px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .mandi-content {
+        flex: 1;
+        text-align: left;
+    }
+
+    .label {
+        color: #0a9d6c; /* Green label from screenshot */
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+
+    .mandi-title {
+        font-size: 36px;
+        font-weight: 800;
+        color: #0f172a; /* Dark navy color */
+        margin: 0 0 20px 0;
+        line-height: 1.2;
+    }
+
+    .description {
+        color: #64748b;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    .searchbutton {
+        background-color: #0a9d6c; /* Matching the green button */
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 4px 14px rgba(10, 157, 108, 0.4);
+        transition: transform 0.2s;
+    }
+
+    .searchbutton:hover {
+        transform: translateY(-2px);
+    }
+
+    /* Right Side Map Box from screenshot */
+    .mandi-map-box {
+        flex: 1;
+        border: 2px dashed #e2e8f0;
+        border-radius: 24px;
+        height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+    }
+
+    .map-inner {
+        text-align: center;
+        color: #94a3b8;
+    }
+
+    .map-icon {
+        font-size: 50px;
+        margin-bottom: 10px;
+        opacity: 0.3;
+    }
+
+    /* Responsive for Mobile */
+    @media (max-width: 768px) {
+        #nearmandis {
+            flex-direction: column;
+            text-align: center;
+        }
+        .mandi-content {
+            text-align: center;
+        }
+    }
+    /* Styling for the new list items */
+    .mandi-item {
+        background: #f8fafc;
+        border-left: 4px solid #0a9d6c;
+        padding: 12px 15px;
+        margin-bottom: 10px;
+        border-radius: 0 8px 8px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.2s;
+    }
+    .mandi-item:hover { background: #f1f5f9; }
+    .mandi-info h4 { margin: 0; color: #1e293b; font-size: 16px; }
+    .mandi-info p { margin: 2px 0 0; color: #64748b; font-size: 13px; }
+    .dir-btn {
+        color: #0a9d6c;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    
