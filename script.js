@@ -269,7 +269,7 @@ setInterval(changeTagline, 3000);
  * Fully Integrated: Real-time Gemini 1.5 Flash AI
  */
 
-const GEMINI_API_KEY = "AIzaSyAfwWN5eDtVb8aZAA5Zyfi4G4Kp-YetWrQ"; 
+const GEMINI_API_KEY = "api_key"; 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const synth = window.speechSynthesis;
 
@@ -550,7 +550,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- SPECIFIC CARD HANDLERS ---
 
   async function handleWeather(inner, lat, lon) {
-    const API_KEY = '65455492a858efa2d1ad66af49325ea1'; // <--- PASTE YOUR KEY HERE
+    const API_KEY = 'key'; // <--- PASTE YOUR KEY HERE
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
 
     inner.innerHTML = `<h2>Fetching Live Data...</h2><div class="loader"></div>`;
@@ -878,7 +878,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // --- UPDATED REAL WEATHER LOGIC ---
     async function getRealWeather(lat, lon) {
         // 1. INSERT YOUR KEY BELOW
-        const apiKey = "65455492a858efa2d1ad66af49325ea1"; 
+        const apiKey = "key"; 
         const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
         try {
