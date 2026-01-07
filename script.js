@@ -269,7 +269,7 @@ setInterval(changeTagline, 3000);
  * Fully Integrated: Real-time Gemini 1.5 Flash AI
  */
 
-const GEMINI_API_KEY = "AIzaSyD4JjSbIFItFDiaxVXeykKP6qAOFibOThQ"; 
+const GEMINI_API_KEY = "AIzaSyAfwWN5eDtVb8aZAA5Zyfi4G4Kp-YetWrQ"; 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const synth = window.speechSynthesis;
 
@@ -550,7 +550,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- SPECIFIC CARD HANDLERS ---
 
   async function handleWeather(inner, lat, lon) {
-    const API_KEY = 'YOUR_OPENWEATHER_API_KEY'; // <--- PASTE YOUR KEY HERE
+    const API_KEY = '65455492a858efa2d1ad66af49325ea1'; // <--- PASTE YOUR KEY HERE
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
 
     inner.innerHTML = `<h2>Fetching Live Data...</h2><div class="loader"></div>`;
@@ -828,7 +828,7 @@ window.findNearbyMandis = function() {
             (error) => {
                 // If the user hasn't allowed location, use a fallback city (e.g., Bengaluru)
                 console.warn("Location denied. Showing default view.");
-                statusText.innerHTML = "⚠️ GPS Denied. Showing <b>National Markets</b>.";
+                statusText.innerHTML = ". Showing <b>National Markets</b>.";
                 
                 const fallbackUrl = `https://www.google.com/maps?q=APMC+Mandi+Market+India&z=6&output=embed`;
                 mapContainer.innerHTML = `<iframe width="100%" height="100%" style="border:0; border-radius: 24px;" src="${fallbackUrl}"></iframe>`;
