@@ -529,7 +529,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }, 800);
                 },
                 (err) => {
-                    console.warn("GPS Denied. Using Demo Location.");
+                    console.warn(". Using Demo Location.");
                     setTimeout(() => {
                         if (type === 'weather') handleWeather(inner, fallbackLat, fallbackLon);
                         else if (type === 'officer') handleOfficer(inner, fallbackLat, fallbackLon);
@@ -878,7 +878,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // --- UPDATED REAL WEATHER LOGIC ---
     async function getRealWeather(lat, lon) {
         // 1. INSERT YOUR KEY BELOW
-        const apiKey = "YOUR_KEY_HERE"; 
+        const apiKey = "65455492a858efa2d1ad66af49325ea1"; 
         const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
         try {
